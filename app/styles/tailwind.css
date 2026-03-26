@@ -123,3 +123,50 @@
   --white-light: #e0e6ed;
   --white-dark: #888ea8;
 }
+
+@layer utilities {
+  --tw-prose-invert-headings: var(--color-white-dark);
+  --tw-prose-invert-links: var(--color-white-dark);
+}
+
+@layer base {
+  h1 {
+    fontsize: "40px";
+    marginbottom: "0.5rem";
+    margintop: 0;
+  }
+  h2 {
+    fontsize: "32px";
+    marginbottom: "0.5rem";
+    margintop: 0;
+  }
+  h3 {
+    fontsize: "28px";
+    marginbottom: "0.5rem";
+    margintop: 0;
+  }
+  h4 {
+    fontsize: "24px";
+    marginbottom: "0.5rem";
+    margintop: 0;
+  }
+  h5 {
+    fontsize: "20px";
+    marginbottom: "0.5rem";
+    margintop: 0;
+  }
+  h6 {
+    fontsize: "16px";
+    marginbottom: "0.5rem";
+    margintop: 0;
+  }
+  p {
+    marginbottom: "0.5rem";
+  }
+  li {
+    margin: 0;
+  }
+  img {
+    margin: 0;
+  }
+}

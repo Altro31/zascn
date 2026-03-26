@@ -4,8 +4,15 @@
   "homepage": "https://acme.com",
   "items": [
     {
+      "name": "start",
+      "type": "registry:base",
+      "registryDependencies": [
+        "@zascn/base-style"
+      ]
+    },
+    {
       "name": "base-style",
-      "type": "registry:component",
+      "type": "registry:theme",
       "dependencies": [
         "@tailwindcss/forms",
         "@tailwindcss/typography"
@@ -109,23 +116,20 @@
       ],
       "cssVars": {
         "light": {
-          "--background": "#ffffff",
-          "--primary": "#2563eb",
-          "--secondary": "#805dca"
+          "background": "#ffffff",
+          "primary": "#2563eb",
+          "secondary": "#805dca"
         },
         "dark": {
-          "--background": "#0e1726",
-          "--primary": "#2563eb",
-          "--secondary": "#805dca"
+          "background": "#0e1726",
+          "primary": "#2563eb",
+          "secondary": "#805dca"
         }
       },
       "css": {
         "@import \".styles/globals.css\"": {},
-        "@plugin \"@tailwindcss/forms\"": {
-          "strategy": "class"
-        },
+        "@plugin \"@tailwindcss/forms\" {\"strategy\": \"class\"}": {},
         "@plugin \"@tailwindcss/typography\"": {},
-        "@config \"tailwind.config.js\"": {},
         "@layer base": {
           ".lucide": {
             "@apply size-4": {}
