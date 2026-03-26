@@ -1,6 +1,1014 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
+  "name": "zascn",
   "homepage": "https://acme.com",
-  "items": []
+  "items": [
+    {
+      "name": "base-style",
+      "type": "registry:component",
+      "dependencies": [
+        "@tailwindcss/forms",
+        "@tailwindcss/typography"
+      ],
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "app/styles/animate.css",
+          "target": "app/styles/animate.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/components.css",
+          "target": "app/styles/components.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/datatables.css",
+          "target": "app/styles/datatables.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/dragndrop.css",
+          "target": "app/styles/dragndrop.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/file-upload-preview.css",
+          "target": "app/styles/file-upload-preview.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/flatpickr.css",
+          "target": "app/styles/flatpickr.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/form-elements.css",
+          "target": "app/styles/form-elements.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/fullcalendar.css",
+          "target": "app/styles/fullcalendar.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/main.css",
+          "target": "app/styles/main.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/markdown-editor.css",
+          "target": "app/styles/markdown-editor.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/progressbar.css",
+          "target": "app/styles/progressbar.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/quill-editor.css",
+          "target": "app/styles/quill-editor.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/scrumboard.css",
+          "target": "app/styles/scrumboard.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/select2.css",
+          "target": "app/styles/select2.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/sweetalert.css",
+          "target": "app/styles/sweetalert.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/swiper.css",
+          "target": "app/styles/swiper.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/tippy.css",
+          "target": "app/styles/tippy.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/tour.css",
+          "target": "app/styles/tour.css"
+        },
+        {
+          "type": "registry:item",
+          "path": "app/styles/utilities.css",
+          "target": "app/styles/utilities.css"
+        }
+      ],
+      "cssVars": {
+        "light": {
+          "--background": "#ffffff",
+          "--primary": "#2563eb",
+          "--secondary": "#805dca"
+        },
+        "dark": {
+          "--background": "#0e1726",
+          "--primary": "#2563eb",
+          "--secondary": "#805dca"
+        }
+      },
+      "css": {
+        "@import \".styles/globals.css\"": {},
+        "@plugin \"@tailwindcss/forms\"": {
+          "strategy": "class"
+        },
+        "@plugin \"@tailwindcss/typography\"": {},
+        "@config \"tailwind.config.js\"": {},
+        "@layer base": {
+          ".lucide": {
+            "@apply size-4": {}
+          }
+        }
+      }
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "dependencies": [
+        "sweetalert2"
+      ],
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/alert/alert-box.tsx",
+          "target": "components/alert/alert-box.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/alert/sweet-alert.tsx",
+          "target": "components/alert/sweet-alert.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/badge/badge.tsx",
+          "target": "components/badge/badge.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/badge/status-badge.tsx",
+          "target": "components/badge/status-badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/breadcrumbs/auto-breadcrumbs.tsx",
+          "target": "components/breadcrumbs/auto-breadcrumbs.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/breadcrumbs/breadcrumbs-context.tsx",
+          "target": "components/breadcrumbs/breadcrumbs-context.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/breadcrumbs/breadcrumbs-link.tsx",
+          "target": "components/breadcrumbs/breadcrumbs-link.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/breadcrumbs/breadcrumbs.tsx",
+          "target": "components/breadcrumbs/breadcrumbs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/button/back-button.tsx",
+          "target": "components/button/back-button.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/button/button.tsx",
+          "target": "components/button/button.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/button/icon-action-button.tsx",
+          "target": "components/button/icon-action-button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "cards",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/cards/card.tsx",
+          "target": "components/cards/card.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/cards/info-card.tsx",
+          "target": "components/cards/info-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/carousel/carousel.tsx",
+          "target": "components/carousel/carousel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/checkbox/checkbox.tsx",
+          "target": "components/checkbox/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "datagrid",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/card-grid.tsx",
+          "target": "components/datagrid/card-grid.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/column-selector.tsx",
+          "target": "components/datagrid/column-selector.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/constants.ts",
+          "target": "components/datagrid/constants.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/datagrid-header.tsx",
+          "target": "components/datagrid/datagrid-header.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/datagrid-skeleton.tsx",
+          "target": "components/datagrid/datagrid-skeleton.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/datagrid.tsx",
+          "target": "components/datagrid/datagrid.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/filters/active-filter-chips.tsx",
+          "target": "components/datagrid/filters/active-filter-chips.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/filters/date-range-filter.tsx",
+          "target": "components/datagrid/filters/date-range-filter.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/filters/debt-type-tabs-filter.tsx",
+          "target": "components/datagrid/filters/debt-type-tabs-filter.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/filters/range-picker.tsx",
+          "target": "components/datagrid/filters/range-picker.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/filters/select-filter.tsx",
+          "target": "components/datagrid/filters/select-filter.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/filters/text-filter.tsx",
+          "target": "components/datagrid/filters/text-filter.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/hooks/index.ts",
+          "target": "components/datagrid/hooks/index.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/hooks/use-column-visibility.ts",
+          "target": "components/datagrid/hooks/use-column-visibility.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/hooks/use-datagrid-handlers.ts",
+          "target": "components/datagrid/hooks/use-datagrid-handlers.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/index.ts",
+          "target": "components/datagrid/index.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/pagination.tsx",
+          "target": "components/datagrid/pagination.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/pagination/cssVariables.ts",
+          "target": "components/datagrid/pagination/cssVariables.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/pagination/data-table-page-size-selector.tsx",
+          "target": "components/datagrid/pagination/data-table-page-size-selector.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/pagination/datatable-pagination.tsx",
+          "target": "components/datagrid/pagination/datatable-pagination.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/pagination/hooks.ts",
+          "target": "components/datagrid/pagination/hooks.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/pagination/icons/icon-selector.tsx",
+          "target": "components/datagrid/pagination/icons/icon-selector.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/pagination/types.ts",
+          "target": "components/datagrid/pagination/types.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/summary-order-datagrid.tsx",
+          "target": "components/datagrid/summary-order-datagrid.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/datagrid/types.ts",
+          "target": "components/datagrid/types.ts"
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/error/animations/401.json",
+          "target": "components/error/animations/401.json"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/error/animations/403.json",
+          "target": "components/error/animations/403.json"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/error/animations/404.json",
+          "target": "components/error/animations/404.json"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/error/animations/General.json",
+          "target": "components/error/animations/General.json"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/error/error-401.tsx",
+          "target": "components/error/error-401.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/error/error-403.tsx",
+          "target": "components/error/error-403.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/error/error-404.tsx",
+          "target": "components/error/error-404.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/error/general-error.tsx",
+          "target": "components/error/general-error.tsx"
+        }
+      ]
+    },
+    {
+      "name": "floating-container",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/floating-container/index.tsx",
+          "target": "components/floating-container/index.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/form/error-indicator.tsx",
+          "target": "components/form/error-indicator.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/form/form-error-summary.tsx",
+          "target": "components/form/form-error-summary.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/form/read-only-field/read-only-field.tsx",
+          "target": "components/form/read-only-field/read-only-field.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/form/read-only-field/read-only-type-components.tsx",
+          "target": "components/form/read-only-field/read-only-type-components.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/form/template-variables-info.tsx",
+          "target": "components/form/template-variables-info.tsx"
+        }
+      ]
+    },
+    {
+      "name": "html-text-editor",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/code-editor.tsx",
+          "target": "components/html-text-editor/code-editor.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/editor-header.tsx",
+          "target": "components/html-text-editor/editor-header.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/editor-toolbar.tsx",
+          "target": "components/html-text-editor/editor-toolbar.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/help-guide.tsx",
+          "target": "components/html-text-editor/help-guide.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/html-editor-main.tsx",
+          "target": "components/html-text-editor/html-editor-main.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/html-rich-editor.tsx",
+          "target": "components/html-text-editor/html-rich-editor.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/index.ts",
+          "target": "components/html-text-editor/index.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/preview-panel.tsx",
+          "target": "components/html-text-editor/preview-panel.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/README.md",
+          "target": "components/html-text-editor/README.md"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/templates.ts",
+          "target": "components/html-text-editor/templates.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/types.ts",
+          "target": "components/html-text-editor/types.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/html-text-editor/useHTMLEditor.ts",
+          "target": "components/html-text-editor/useHTMLEditor.ts"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/input/autocomplete.tsx",
+          "target": "components/input/autocomplete.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/calendar.tsx",
+          "target": "components/input/calendar.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/checkbox.tsx",
+          "target": "components/input/checkbox.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/date-input.tsx",
+          "target": "components/input/date-input.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/editable-field.tsx",
+          "target": "components/input/editable-field.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/input-date.tsx",
+          "target": "components/input/input-date.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/input-with-label.tsx",
+          "target": "components/input/input-with-label.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/input.tsx",
+          "target": "components/input/input.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/mask-input-with-label.tsx",
+          "target": "components/input/mask-input-with-label.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/input/text-area.tsx",
+          "target": "components/input/text-area.tsx"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/label/label.tsx",
+          "target": "components/label/label.tsx"
+        }
+      ]
+    },
+    {
+      "name": "loaders",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/loaders/loader-button.tsx",
+          "target": "components/loaders/loader-button.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/loaders/loader.tsx",
+          "target": "components/loaders/loader.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/loaders/spinner.tsx",
+          "target": "components/loaders/spinner.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/loaders/zas-loader/zas-loader.json",
+          "target": "components/loaders/zas-loader/zas-loader.json"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/loaders/zas-loader/zas-loader.tsx",
+          "target": "components/loaders/zas-loader/zas-loader.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/menu/actions-menu.tsx",
+          "target": "components/menu/actions-menu.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/menu/app-actions-menu.tsx",
+          "target": "components/menu/app-actions-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/modal/attributes-modal.tsx",
+          "target": "components/modal/attributes-modal.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/modal/delete-modal.tsx",
+          "target": "components/modal/delete-modal.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/modal/modal-container.tsx",
+          "target": "components/modal/modal-container.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/modal/modal.tsx",
+          "target": "components/modal/modal.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/modal/processing-modal.tsx",
+          "target": "components/modal/processing-modal.tsx"
+        }
+      ]
+    },
+    {
+      "name": "navigation",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/navigation/history-nav.tsx",
+          "target": "components/navigation/history-nav.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/pagination.tsx",
+          "target": "components/pagination.tsx"
+        }
+      ]
+    },
+    {
+      "name": "phone-input",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/phone-input/country-phone-input/country-combobox.tsx",
+          "target": "components/phone-input/country-phone-input/country-combobox.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/phone-input/country-phone-input/country-flag.tsx",
+          "target": "components/phone-input/country-phone-input/country-flag.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/phone-input/country-phone-input/phone-country-inline.tsx",
+          "target": "components/phone-input/country-phone-input/phone-country-inline.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/phone-input/country-phone-input/phone-number-input.tsx",
+          "target": "components/phone-input/country-phone-input/phone-number-input.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/phone-input/use-countries.tsx",
+          "target": "components/phone-input/use-countries.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/phone-input/use-myip.ts",
+          "target": "components/phone-input/use-myip.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/phone-input/utils.ts",
+          "target": "components/phone-input/utils.ts"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/popover/popover.tsx",
+          "target": "components/popover/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/progress/gradient-progress.tsx",
+          "target": "components/progress/gradient-progress.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/radio/radio-group.tsx",
+          "target": "components/radio/radio-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "react-hook-form",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/form-provider.tsx",
+          "target": "components/react-hook-form/form-provider.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-autcomplete-fetcher-scroll-infinity.tsx",
+          "target": "components/react-hook-form/rhf-autcomplete-fetcher-scroll-infinity.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-autocomplete-local-adapter.tsx",
+          "target": "components/react-hook-form/rhf-autocomplete-local-adapter.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-autocomplete-multiple-fetcher-scroll-infinity.tsx",
+          "target": "components/react-hook-form/rhf-autocomplete-multiple-fetcher-scroll-infinity.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-autocomplete-with-add-button.tsx",
+          "target": "components/react-hook-form/rhf-autocomplete-with-add-button.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-checkbox.tsx",
+          "target": "components/react-hook-form/rhf-checkbox.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-color-picker.tsx",
+          "target": "components/react-hook-form/rhf-color-picker.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-country-code-select.tsx",
+          "target": "components/react-hook-form/rhf-country-code-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-country-select.tsx",
+          "target": "components/react-hook-form/rhf-country-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-date-input.tsx",
+          "target": "components/react-hook-form/rhf-date-input.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-document-upload.tsx",
+          "target": "components/react-hook-form/rhf-document-upload.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-file-tile.tsx",
+          "target": "components/react-hook-form/rhf-file-tile.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-html-editor.tsx",
+          "target": "components/react-hook-form/rhf-html-editor.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-image-upload.tsx",
+          "target": "components/react-hook-form/rhf-image-upload.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-infinite-entity-multiselect.tsx",
+          "target": "components/react-hook-form/rhf-infinite-entity-multiselect.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-input.tsx",
+          "target": "components/react-hook-form/rhf-input.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-mask-input.tsx",
+          "target": "components/react-hook-form/rhf-mask-input.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-multi-document-upload.tsx",
+          "target": "components/react-hook-form/rhf-multi-document-upload.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-multi-images-upload.tsx",
+          "target": "components/react-hook-form/rhf-multi-images-upload.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-phone-country-select.tsx",
+          "target": "components/react-hook-form/rhf-phone-country-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-select.tsx",
+          "target": "components/react-hook-form/rhf-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-switch.tsx",
+          "target": "components/react-hook-form/rhf-switch.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/react-hook-form/rhf-text-field.tsx",
+          "target": "components/react-hook-form/rhf-text-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/select/advance-form-select.tsx",
+          "target": "components/select/advance-form-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/select/advanced-select.tsx",
+          "target": "components/select/advanced-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/select/autocomplete-fetcher-scroll-infinity-select.tsx",
+          "target": "components/select/autocomplete-fetcher-scroll-infinity-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/select/country-select/country-flag.tsx",
+          "target": "components/select/country-select/country-flag.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/select/country-select/country-select-fetcher.tsx",
+          "target": "components/select/country-select/country-select-fetcher.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/select/country-select/country-select.tsx",
+          "target": "components/select/country-select/country-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/select/country-select/utils.ts",
+          "target": "components/select/country-select/utils.ts"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/select/reusable-select.tsx",
+          "target": "components/select/reusable-select.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/select/select.tsx",
+          "target": "components/select/select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "skeletons",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/skeletons/details-skeleton.tsx",
+          "target": "components/skeletons/details-skeleton.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/skeletons/form-skeleton.tsx",
+          "target": "components/skeletons/form-skeleton.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/skeletons/list-skeleton.tsx",
+          "target": "components/skeletons/list-skeleton.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/switch/toggle-switch.tsx",
+          "target": "components/switch/toggle-switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tab",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/tab/tabs-with-error-indicators.tsx",
+          "target": "components/tab/tabs-with-error-indicators.tsx"
+        },
+        {
+          "type": "registry:item",
+          "path": "registry/tab/tabs.tsx",
+          "target": "components/tab/tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip-top-basic",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "registry/tooltip-top-basic.tsx",
+          "target": "components/tooltip-top-basic.tsx"
+        }
+      ]
+    }
+  ]
 }
