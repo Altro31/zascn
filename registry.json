@@ -7,7 +7,36 @@
       "name": "start",
       "type": "registry:base",
       "registryDependencies": [
-        "@zascn/base-style"
+        "@zascn/base-style",
+        "@zascn/alert",
+        "@zascn/badge",
+        "@zascn/breadcrumbs",
+        "@zascn/button",
+        "@zascn/cards",
+        "@zascn/carousel",
+        "@zascn/checkbox",
+        "@zascn/datagrid",
+        "@zascn/error",
+        "@zascn/floating-container",
+        "@zascn/form",
+        "@zascn/html-text-editor",
+        "@zascn/input",
+        "@zascn/label",
+        "@zascn/loaders",
+        "@zascn/menu",
+        "@zascn/modal",
+        "@zascn/navigation",
+        "@zascn/pagination",
+        "@zascn/phone-input",
+        "@zascn/popover",
+        "@zascn/progress",
+        "@zascn/radio",
+        "@zascn/react-hook-form",
+        "@zascn/select",
+        "@zascn/skeletons",
+        "@zascn/switch",
+        "@zascn/tab",
+        "@zascn/tooltip-top-basic"
       ]
     },
     {
@@ -201,6 +230,13 @@
     {
       "name": "button",
       "type": "registry:component",
+      "dependencies": [
+        "framer-motion"
+      ],
+      "registryDependencies": [
+        "button",
+        "@zascn/loaders"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -238,6 +274,9 @@
     {
       "name": "carousel",
       "type": "registry:component",
+      "dependencies": [
+        "swiper"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -260,7 +299,21 @@
     {
       "name": "datagrid",
       "type": "registry:component",
+      "dependencies": [
+        "mantine-datatable"
+      ],
+      "registryDependencies": [
+        "@zascn/checkbox"
+      ],
       "files": [
+        {
+          "type": "registry:lib",
+          "path": "lib/debounce.ts"
+        },
+        {
+          "type": "registry:hook",
+          "path": "hooks/use-filters-url.tsx"
+        },
         {
           "type": "registry:item",
           "path": "registry/datagrid/card-grid.tsx",
@@ -391,6 +444,10 @@
     {
       "name": "error",
       "type": "registry:component",
+      "dependencies": [
+        "lottie-web",
+        "zas-sso-client"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -448,6 +505,12 @@
     {
       "name": "form",
       "type": "registry:component",
+      "dependencies": [
+        "react-hook-form"
+      ],
+      "registryDependencies": [
+        "@zascn/tooltip-top-basic"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -479,6 +542,14 @@
     {
       "name": "html-text-editor",
       "type": "registry:component",
+      "dependencies": [
+        "react-toastify"
+      ],
+      "registryDependencies": [
+        "@zascn/cards",
+        "@zascn/badge",
+        "@zascn/button"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -545,6 +616,19 @@
     {
       "name": "input",
       "type": "registry:component",
+      "registryDependencies": [
+        "button",
+        "@zascn/popover"
+      ],
+      "dependencies": [
+        "date-fns",
+        "react-day-picker",
+        "react-hook-form",
+        "react-text-mask"
+      ],
+      "devDependencies": [
+        "@types/react-text-mask"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -612,6 +696,12 @@
     {
       "name": "loaders",
       "type": "registry:component",
+      "registryDependencies": [
+        "@zascn/button"
+      ],
+      "dependencies": [
+        "lottie-web"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -643,6 +733,12 @@
     {
       "name": "menu",
       "type": "registry:component",
+      "dependencies": [
+        "@mantine/core"
+      ],
+      "registryDependencies": [
+        "@zascn/modal"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -659,6 +755,15 @@
     {
       "name": "modal",
       "type": "registry:component",
+      "registryDependencies": [
+        "@zascn/toast"
+      ],
+      "dependencies": [
+        "@headlessui/react",
+        "@hookform/resolvers/zod",
+        "react-hook-form",
+        "zod"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -690,6 +795,9 @@
     {
       "name": "navigation",
       "type": "registry:component",
+      "registryDependencies": [
+        "@zascn/button"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -712,32 +820,14 @@
     {
       "name": "phone-input",
       "type": "registry:component",
+      "registryDependencies": [
+        "@zascn/input"
+      ],
+      "dependencies": [
+        "downshift",
+        "@tanstack/react-query"
+      ],
       "files": [
-        {
-          "type": "registry:item",
-          "path": "registry/phone-input/country-phone-input/country-combobox.tsx",
-          "target": "components/phone-input/country-phone-input/country-combobox.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/phone-input/country-phone-input/country-flag.tsx",
-          "target": "components/phone-input/country-phone-input/country-flag.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/phone-input/country-phone-input/phone-country-inline.tsx",
-          "target": "components/phone-input/country-phone-input/phone-country-inline.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/phone-input/country-phone-input/phone-number-input.tsx",
-          "target": "components/phone-input/country-phone-input/phone-number-input.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/phone-input/use-countries.tsx",
-          "target": "components/phone-input/use-countries.tsx"
-        },
         {
           "type": "registry:item",
           "path": "registry/phone-input/use-myip.ts",
@@ -753,6 +843,9 @@
     {
       "name": "popover",
       "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-popover"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -775,6 +868,9 @@
     {
       "name": "radio",
       "type": "registry:component",
+      "dependencies": [
+        "@radix-ui/react-radio-group"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -786,7 +882,29 @@
     {
       "name": "react-hook-form",
       "type": "registry:component",
+      "registryDependencies": [
+        "@zascn/button",
+        "@zascn/label",
+        "@zascn/checkbox",
+        "@zascn/input",
+        "@zascn/html-text-editor"
+      ],
+      "dependencies": [
+        "@mantine/core",
+        "react-hook-form",
+        "@headlessui/react",
+        "date-fns",
+        "react-toastify",
+        "@mantine/core",
+        "@tanstack/react-query",
+        "@zascn/loader",
+        "react-text-mask"
+      ],
       "files": [
+        {
+          "type": "registry:hook",
+          "path": "hooks/use-debounce.ts"
+        },
         {
           "type": "registry:item",
           "path": "registry/react-hook-form/form-provider.tsx",
@@ -821,16 +939,6 @@
           "type": "registry:item",
           "path": "registry/react-hook-form/rhf-color-picker.tsx",
           "target": "components/react-hook-form/rhf-color-picker.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/react-hook-form/rhf-country-code-select.tsx",
-          "target": "components/react-hook-form/rhf-country-code-select.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/react-hook-form/rhf-country-select.tsx",
-          "target": "components/react-hook-form/rhf-country-select.tsx"
         },
         {
           "type": "registry:item",
@@ -884,11 +992,6 @@
         },
         {
           "type": "registry:item",
-          "path": "registry/react-hook-form/rhf-phone-country-select.tsx",
-          "target": "components/react-hook-form/rhf-phone-country-select.tsx"
-        },
-        {
-          "type": "registry:item",
           "path": "registry/react-hook-form/rhf-select.tsx",
           "target": "components/react-hook-form/rhf-select.tsx"
         },
@@ -907,7 +1010,21 @@
     {
       "name": "select",
       "type": "registry:component",
+      "registryDependencies": [
+        "@zascn/loaders"
+      ],
+      "dependencies": [
+        "@mantine/core"
+      ],
       "files": [
+        {
+          "type": "registry:hook",
+          "path": "hooks/use-search.ts"
+        },
+        {
+          "type": "registry:hook",
+          "path": "hooks/use-infinite-autocomplete.ts"
+        },
         {
           "type": "registry:item",
           "path": "registry/select/advance-form-select.tsx",
@@ -922,26 +1039,6 @@
           "type": "registry:item",
           "path": "registry/select/autocomplete-fetcher-scroll-infinity-select.tsx",
           "target": "components/select/autocomplete-fetcher-scroll-infinity-select.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/select/country-select/country-flag.tsx",
-          "target": "components/select/country-select/country-flag.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/select/country-select/country-select-fetcher.tsx",
-          "target": "components/select/country-select/country-select-fetcher.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/select/country-select/country-select.tsx",
-          "target": "components/select/country-select/country-select.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/select/country-select/utils.ts",
-          "target": "components/select/country-select/utils.ts"
         },
         {
           "type": "registry:item",
@@ -990,6 +1087,9 @@
     {
       "name": "tab",
       "type": "registry:component",
+      "dependencies": [
+        "@headlessui/react"
+      ],
       "files": [
         {
           "type": "registry:item",
@@ -1006,11 +1106,29 @@
     {
       "name": "tooltip-top-basic",
       "type": "registry:component",
+      "dependencies": [
+        "@mantine/core",
+        "lodash"
+      ],
       "files": [
         {
           "type": "registry:item",
           "path": "registry/tooltip-top-basic.tsx",
           "target": "components/tooltip-top-basic.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:component",
+      "dependencies": [
+        "react-toastify"
+      ],
+      "files": [
+        {
+          "type": "registry:item",
+          "path": "config/toast/toastConfig.ts",
+          "target": "config/toast/toastConfig.ts"
         }
       ]
     }
