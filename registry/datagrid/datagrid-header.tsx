@@ -138,7 +138,7 @@ export function DataGridHeader<T extends Record<string, any>>({
 						{tab.count}
 					</span>
 				)}
-				{variant === 'underline' && (
+				{variant === "underline" && (
 					<span
 						className={
 							'bg-primary absolute -bottom-0.5 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full transition-all duration-200 ' +
