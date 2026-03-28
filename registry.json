@@ -760,7 +760,7 @@
       ],
       "dependencies": [
         "@headlessui/react",
-        "@hookform/resolvers/zod",
+        "@hookform/resolvers",
         "react-hook-form",
         "zod"
       ],
@@ -887,7 +887,8 @@
         "@zascn/label",
         "@zascn/checkbox",
         "@zascn/input",
-        "@zascn/html-text-editor"
+        "@zascn/html-text-editor",
+        "@zascn/loaders"
       ],
       "dependencies": [
         "@mantine/core",
@@ -897,7 +898,6 @@
         "react-toastify",
         "@mantine/core",
         "@tanstack/react-query",
-        "@zascn/loader",
         "react-text-mask"
       ],
       "files": [

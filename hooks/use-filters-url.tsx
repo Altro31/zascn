@@ -1,5 +1,5 @@
 'use client';
-import debounce from '@/services/utils/debounce';
+import debounce from '@/lib/debounce';
 import { SearchParams } from '@/types/fetch/request';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useMemo } from 'react';
