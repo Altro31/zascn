@@ -1,5 +1,5 @@
+import type { SearchParams } from '@/lib/types';
 import { useCallback } from 'react';
-import { SearchParams } from '@/types/fetch/request';
 
 interface UseDataGridHandlersProps {
 	searchParams: SearchParams;

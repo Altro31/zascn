@@ -38,7 +38,7 @@ export const ReusableSelect: React.FC<ReusableSelectProps> = ({
 			checkIconPosition='right'
 			maxDropdownHeight={maxDropdownHeight}
 			nothingFoundMessage={nothingFoundMessage}
-			className={`min-w-[220px] flex-1 ${className ?? ''}`}
+			className={`min-w-55 flex-1 ${className ?? ''}`}
 			classNames={{
 				input: `
           border border-gray-300 dark:border-gray-700

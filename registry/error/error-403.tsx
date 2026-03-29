@@ -3,7 +3,7 @@
 import lottie from "lottie-web";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
-import animationData from "@/registry/error/animations/403.json";
+import animationData from "@/components/error/animations/403.json";
 
 /**
  * Error403Fallback

@@ -1,5 +1,4 @@
 'use client';
-import IconX from '@/components/icon/icon-x';
 import { cn } from '@/lib/utils';
 import {
 	Dialog,
@@ -7,6 +6,7 @@ import {
 	Transition,
 	TransitionChild,
 } from '@headlessui/react';
+import { X } from 'lucide-react';
 import React, { Fragment } from 'react';
 
 type ModalSize = 'sm' | 'md' | 'lg' | 'xl';
@@ -77,7 +77,7 @@ const SimpleModal = ({
 				>
 					<div className='fixed inset-0' />
 				</TransitionChild>
-				<div className='font-display animate-in fade-in fixed inset-0 z-[100] flex justify-center bg-black/50 backdrop-blur-[1px] duration-200'>
+				<div className='font-display animate-in fade-in fixed inset-0 z-100 flex justify-center bg-black/50 backdrop-blur-[1px] duration-200'>
 					<div
 						className={cn(
 							'flex min-h-screen w-full justify-center p-4',
@@ -112,7 +112,7 @@ const SimpleModal = ({
 											className='text-gray-400 transition-colors hover:text-red-500'
 											onClick={onClose}
 										>
-											<IconX />
+											<X />
 										</button>
 									)}
 								</div>

@@ -1,6 +1,4 @@
-import { PaginatedResponse } from '@/types/common';
-import { ApiResponse } from '@/types/fetch/api';
-import { IQueryable } from '@/types/fetch/request';
+import type { ApiResponse, IQueryable, PaginatedResponse } from '@/lib/types';
 import AutocompleteFetcherInfinity, {
 	AutocompleteFetcherInfinityProps,
 } from '../select/autocomplete-fetcher-scroll-infinity-select';

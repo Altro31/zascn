@@ -13,7 +13,7 @@ import {
   UserPlus,
 } from "lucide-react";
 import { useState } from "react";
-import DeleteDialog from "../modal/delete-modal";
+import DeleteDialog from '@/components/modal/delete-modal';
 
 interface MenuProps {
   onAddEntity?: () => void;

@@ -211,7 +211,7 @@ export function AdvancedSearchSelect<T>({
 						data-test={dataTest}
 					>
 						{label && (
-							<label className='mb-[13px] block text-sm font-medium text-gray-700 dark:text-gray-200'>
+							<label className='mb-3.25 block text-sm font-medium text-gray-700 dark:text-gray-200'>
 								{label}
 								{required && <span className='text-red-500'> *</span>}
 							</label>

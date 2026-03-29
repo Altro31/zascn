@@ -6,7 +6,7 @@ import { RefreshCw } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { redirectToLogin } from "zas-sso-client";
-import animationData from "@/registry/error/animations/401.json";
+import animationData from "@/components/error/animations/401.json";
 
 /**
  * Error401Fallback

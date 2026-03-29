@@ -1,7 +1,8 @@
 'use client';
 
 import { Pagination } from '@/components/datagrid/pagination';
-import { SearchParams } from '@/types/fetch/request';
+import { SearchParams } from '@/lib/types';
+
 import React, { useEffect, useState } from 'react';
 
 export type CardGridProps<T> = {

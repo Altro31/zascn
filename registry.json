@@ -40,6 +40,16 @@
       ]
     },
     {
+      "name": "types",
+      "type": "registry:component",
+      "files": [
+        {
+          "type": "registry:lib",
+          "path": "lib/types.ts"
+        }
+      ]
+    },
+    {
       "name": "base-style",
       "type": "registry:theme",
       "dependencies": [
@@ -156,8 +166,8 @@
         }
       },
       "css": {
-        "@import \".styles/globals.css\"": {},
-        "@plugin \"@tailwindcss/forms\" {\"strategy\": \"class\"}": {},
+        "@import \"./styles/globals.css\"": {},
+        "@plugin \"@tailwindcss/forms\"": {},
         "@plugin \"@tailwindcss/typography\"": {},
         "@layer base": {
           ".lucide": {
@@ -300,10 +310,13 @@
       "name": "datagrid",
       "type": "registry:component",
       "dependencies": [
-        "mantine-datatable"
+        "mantine-datatable",
+        "react-flatpickr",
+        "flatpickr"
       ],
       "registryDependencies": [
-        "@zascn/checkbox"
+        "@zascn/checkbox",
+        "@zascn/types"
       ],
       "files": [
         {
@@ -818,29 +831,6 @@
       ]
     },
     {
-      "name": "phone-input",
-      "type": "registry:component",
-      "registryDependencies": [
-        "@zascn/input"
-      ],
-      "dependencies": [
-        "downshift",
-        "@tanstack/react-query"
-      ],
-      "files": [
-        {
-          "type": "registry:item",
-          "path": "registry/phone-input/use-myip.ts",
-          "target": "components/phone-input/use-myip.ts"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/phone-input/utils.ts",
-          "target": "components/phone-input/utils.ts"
-        }
-      ]
-    },
-    {
       "name": "popover",
       "type": "registry:component",
       "dependencies": [
@@ -999,11 +989,6 @@
           "type": "registry:item",
           "path": "registry/react-hook-form/rhf-switch.tsx",
           "target": "components/react-hook-form/rhf-switch.tsx"
-        },
-        {
-          "type": "registry:item",
-          "path": "registry/react-hook-form/rhf-text-field.tsx",
-          "target": "components/react-hook-form/rhf-text-field.tsx"
         }
       ]
     },
@@ -1109,6 +1094,9 @@
       "dependencies": [
         "@mantine/core",
         "lodash"
+      ],
+      "devDependencies": [
+        "@types/lodash"
       ],
       "files": [
         {

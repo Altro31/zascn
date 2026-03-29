@@ -1,9 +1,9 @@
 "use client";
-import IconPlus from "@/components/icon/icon-plus";
-import IconTrash from "@/components/icon/icon-trash";
+
 import SimpleModal from "@/components/modal/modal";
 import showToast from "@/config/toast/toastConfig";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Plus, Trash } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
 import { z } from "zod";
@@ -128,7 +128,7 @@ const AttributesModal: React.FC<AttributesModalProps> = ({
                 onClick={addNewAttribute}
                 className="flex items-center gap-1 px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600"
               >
-                <IconPlus className="w-3 h-3" />
+                <Plus className="w-3 h-3" />
                 Agregar
               </button>
             </div>
@@ -173,7 +173,7 @@ const AttributesModal: React.FC<AttributesModalProps> = ({
                   className="p-2 text-red-500 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-900/20 rounded"
                   title="Eliminar atributo"
                 >
-                  <IconTrash className="w-4 h-4" />
+                  <Trash className="w-4 h-4" />
                 </button>
               </div>
             ))}

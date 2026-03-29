@@ -1,9 +1,7 @@
 import { AdvancedSearchSelect } from '@/components/select/advanced-select';
 
 import { useSearch } from '@/hooks/use-search';
-import { PaginatedResponse } from '@/types/common';
-import { ApiResponse } from '@/types/fetch/api';
-import { IQueryable } from '@/types/fetch/request';
+import type { ApiResponse, IQueryable, PaginatedResponse } from '@/lib/types';
 import { AutocompleteProps } from '@mantine/core';
 
 export interface AutocompleteFetcherInfinityProps<T> extends Omit<

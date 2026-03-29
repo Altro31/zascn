@@ -1,11 +1,12 @@
-import { PaginatedResponse } from '@/types/common';
-import { ApiResponse } from '@/types/fetch/api';
-import { IQueryable } from '@/types/fetch/request';
 import { AutocompleteProps } from '@mantine/core';
 import { useMemo } from 'react';
 import RHFAutocompleteFetcherInfinity from './rhf-autcomplete-fetcher-scroll-infinity';
+import type { ApiResponse, IQueryable, PaginatedResponse } from '@/lib/types';
 
-interface Props<T> extends Omit<AutocompleteProps, 'data' | 'renderOption' | 'defaultValue'> {
+interface Props<T> extends Omit<
+	AutocompleteProps,
+	'data' | 'renderOption' | 'defaultValue'
+> {
 	name: string;
 	label?: string;
 	placeholder?: string;
@@ -29,7 +30,7 @@ interface Props<T> extends Omit<AutocompleteProps, 'data' | 'renderOption' | 'de
 	inputClassName?: string;
 	pageSize?: number;
 	searchFilter?: (item: T, searchTerm: string) => boolean;
-	defaultValue?:T;
+	defaultValue?: T;
 }
 
 export default function RHFAutocompleteLocalAdapter<T>({

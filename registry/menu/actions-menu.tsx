@@ -1,8 +1,8 @@
 import { ActionIcon, Menu } from '@mantine/core';
 import { MoreHorizontal } from 'lucide-react';
 import { useState } from 'react';
-import DeleteDialog from '../modal/delete-modal';
 import { cn } from '@/lib/utils';
+import DeleteDialog from '@/components/modal/delete-modal';
 
 // Definir el tipo de acción reutilizable
 export interface ActionItem {

@@ -11,7 +11,7 @@ import { DataGridHeader } from './datagrid-header';
 import { useColumnVisibility, useDataGridHandlers } from './hooks';
 import { DataGridProps } from './types';
 import Checkbox from '@/components/input/checkbox';
-import { SearchParams } from '@/types/fetch/request';
+import { SearchParams } from '@/lib/types';
 
 export function DataGrid<T extends Record<string, any>>({
 	data,

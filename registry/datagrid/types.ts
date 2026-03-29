@@ -1,5 +1,4 @@
-import { PaginatedResponse } from '@/types/common';
-import { SearchParams } from '@/types/fetch/request';
+import type { PaginatedResponse, SearchParams } from '@/lib/types';
 import { DataTableColumn } from 'mantine-datatable';
 
 export type DataGridFilterTab = {

@@ -2,8 +2,7 @@ import React from 'react';
 import { X } from 'lucide-react';
 
 import clsx from 'clsx';
-import { Button } from '@/sections/order/flow/ui/button';
-import { IconButton } from '@/sections/order/flow/ui/icon-button';
+import { Button } from '@/components/ui/button';
 
 interface HeaderAction {
 	id?: string;
@@ -86,22 +85,29 @@ export const ModalContainer: React.FC<ModalContainerProps> = ({
 						{headerActions.map((action) => (
 							<Button
 								key={action.id ?? action.label}
-								variant={action.variant ?? 'ghost'}
+								variant={
+									action.variant
+										? action.variant === 'primary'
+											? 'default'
+											: action.variant
+										: 'ghost'
+								}
 								disabled={isBusy || action.disabled}
 								onClick={action.onClick}
-								className='flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'
+								className='uppercase'
 							>
 								{action.icon}
 								{action.label}
 							</Button>
 						))}
-						<IconButton
-							icon={<X className='h-5 w-5' />}
+						<Button
 							onClick={onClose}
 							variant='ghost'
 							disabled={isBusy}
-							className='text-gray-400 transition-colors hover:text-red-500'
-						/>
+							className='hover:text-red-500'
+						>
+							<X className='size-5' />
+						</Button>
 					</div>
 				</div>
 
@@ -117,10 +123,16 @@ export const ModalContainer: React.FC<ModalContainerProps> = ({
 							{footerLeftAction ? (
 								<Button
 									type='button'
-									variant={footerLeftAction.variant ?? 'ghost'}
+									variant={
+										footerLeftAction.variant
+											? footerLeftAction.variant === 'primary'
+												? 'default'
+												: footerLeftAction.variant
+											: 'ghost'
+									}
 									onClick={footerLeftAction.onClick}
 									disabled={isBusy || footerLeftAction.disabled}
-									className='flex items-center gap-1.5 px-4 py-2 text-xs font-bold tracking-wide text-gray-500 uppercase transition-colors hover:text-gray-800 dark:text-gray-400 dark:hover:text-white'
+									className='uppercase'
 								>
 									{footerLeftAction.icon}
 									{footerLeftAction.label}

@@ -1,10 +1,9 @@
 import { Button } from '@/components/button/button';
 import { Label } from '@/components/label/label';
-import { PaginatedResponse } from '@/types/common';
-import { ApiResponse } from '@/types/fetch/api';
-import { IQueryable } from '@/types/fetch/request';
+
 import { Plus } from 'lucide-react';
 import RHFAutocompleteFetcherInfinity from './rhf-autcomplete-fetcher-scroll-infinity';
+import type { ApiResponse, IQueryable, PaginatedResponse } from '@/lib/types';
 
 type cacheTagEntities = 'units' | 'categories' | 'roles';
 
