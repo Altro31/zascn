@@ -27,7 +27,6 @@
         "@zascn/modal",
         "@zascn/navigation",
         "@zascn/pagination",
-        "@zascn/phone-input",
         "@zascn/popover",
         "@zascn/progress",
         "@zascn/radio",
@@ -996,7 +995,8 @@
       "name": "select",
       "type": "registry:component",
       "registryDependencies": [
-        "@zascn/loaders"
+        "@zascn/loaders",
+        "spinner"
       ],
       "dependencies": [
         "@mantine/core"
